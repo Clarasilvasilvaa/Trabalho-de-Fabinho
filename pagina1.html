@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dermacolor - Atendimento Dermatológico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background: #e0f2ed;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #004D40;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #004D40;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: #f1fffa;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      font-family: 'Playfair Display', serif;
+      color: #004D40;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 15px auto;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #004D40;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #d0e8e2;
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #b2dfdb;
+    }
+
+    footer {
+      background: #004D40;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">Dermacolor</a>
+    <nav>
+      <a href="#como">Como Funciona</a>
+      <a href="#medicos">Especialistas</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Atendimento Dermatológico Online e Gratuito</h1>
+    <p>Fale com médicos especialistas sem sair de casa, com segurança e acolhimento.</p>
+  </section>
+
+  <section id="como" class="section">
+    <h2>Como Funciona</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>1. Cadastro</h3>
+        <p>Você preenche um formulário com suas informações e sintomas.</p>
+      </div>
+      <div class="card">
+        <h3>2. Consulta</h3>
+        <p>Marcamos uma videochamada com um dermatologista.</p>
+      </div>
+      <div class="card">
+        <h3>3. Plano</h3>
+        <p>Receba orientações e cuidados personalizados para sua pele.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="medicos" class="section">
+    <h2>Especialistas</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg" alt="Drª Helena">
+        <h3>Drª. Helena</h3>
+        <p>Acne e pele jovem</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg" alt="Drª Clara">
+        <h3>Drª. Clara</h3>
+        <p>Rosácea e pele sensível</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Dr Ricardo">
+        <h3>Dr. Ricardo</h3>
+        <p>Tons de pele e inclusão</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas" class="section">
+    <h2>Dúvidas Frequentes</h2>
+    <div class="faq-item">
+      <h3>É mesmo gratuito?</h3>
+      <p>Sim! O projeto é 100% gratuito, sem cobranças futuras.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Os médicos são de verdade?</h3>
+      <p>Todos são médicos registrados no CRM e experientes em dermatologia.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Meus dados estão seguros?</h3>
+      <p>Sim. Seus dados são protegidos e sua consulta é confidencial.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Dermacolor</strong> &copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
