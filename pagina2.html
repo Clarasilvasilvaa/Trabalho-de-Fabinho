@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dermacolor - Acesso</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cor-principal: #004D40;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    .secao-entrada {
+      height: 100vh;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .secao-entrada .coluna {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .secao-entrada .lado-imagem {
+      background-image: url('https://i.pinimg.com/1200x/c7/a9/8f/c7a98f934962f4a209200b0d697a7ad5.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .secao-entrada .lado-conteudo {
+      background-color: #f0fdf4;
+    }
+
+    .caixa-login {
+      max-width: 420px;
+      width: 100%;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ccc;
+    }
+
+    .cabecalho {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .cabecalho h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--cor-principal);
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    .cabecalho p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .abas {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 25px;
+    }
+
+    .aba {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      font-weight: 600;
+      cursor: pointer;
+      color: #888;
+      border-bottom: 3px solid transparent;
+      transition: 0.3s ease;
+    }
+
+    .aba:hover {
+      color: var(--cor-principal);
+    }
+
+    .aba.ativa {
+      color: var(--cor-principal);
+      border-bottom-color: var(--cor-principal);
+    }
+
+    .grupo-form {
+      margin-bottom: 20px;
+    }
+
+    .grupo-form label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .input-form {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .input-form:focus {
+      outline: none;
+      border-color: var(--cor-principal);
+    }
+
+    .botao {
+      width: 100%;
+      padding: 14px;
+      background: var(--cor-principal);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao:hover {
+      background: #00332a;
+    }
+
+    .link-rodape {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .link-rodape a {
+      color: var(--cor-principal);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .escondido {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .secao-entrada .lado-imagem {
+        display: none;
+      }
+      .secao-entrada .lado-conteudo {
+        flex-basis: 100%;
+      }
+      .caixa-login {
+        padding: 30px;
+      }
+      .cabecalho h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="secao-entrada">
+    <div class="coluna lado-imagem"></div>
+
+    <div class="coluna lado-conteudo">
+      <div class="caixa-login">
+        <div class="cabecalho">
+          <h1>Seja Bem-vinda!</h1>
+          <p>Acesse sua conta ou crie um novo cadastro.</p>
+        </div>
+
+        <div class="abas">
+          <div id="aba-cadastro" class="aba ativa">Cadastrar</div>
+          <div id="aba-login" class="aba">Entrar</div>
+        </div>
+
+        <form id="form-cadastro">
+          <div class="grupo-form">
+            <label for="reg-nome">Nome Completo</label>
+            <input type="text" id="reg-nome" class="input-form" required>
+          </div>
+          <div class="grupo-form">
+            <label for="reg-email">E-mail</label>
+            <input type="email" id="reg-email" class="input-form" required>
+          </div>
+          <div class="grupo-form">
+            <label for="reg-senha">Crie uma Senha</label>
+            <input type="password" id="reg-senha" class="input-form" required>
+          </div>
+          <button type="submit" class="botao">Criar Conta</button>
+        </form>
+
+        <form id="form-login" class="escondido">
+          <div class="grupo-form">
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email" class="input-form" required>
+          </div>
+          <div class="grupo-form">
+            <label for="login-senha">Senha</label>
+            <input type="password" id="login-senha" class="input-form" required>
+          </div>
+          <button type="submit" class="botao">Entrar</button>
+          <div class="link-rodape">
+            <a href="#">Esqueci minha senha</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const abaCadastro = document.getElementById('aba-cadastro');
+    const abaLogin = document.getElementById('aba-login');
+    const formCadastro = document.getElementById('form-cadastro');
+    const formLogin = document.getElementById('form-login');
+
+    abaCadastro.addEventListener('click', function () {
+      formCadastro.classList.remove('escondido');
+      formLogin.classList.add('escondido');
+      abaCadastro.classList.add('ativa');
+      abaLogin.classList.remove('ativa');
+    });
+
+    abaLogin.addEventListener('click', function () {
+      formLogin.classList.remove('escondido');
+      formCadastro.classList.add('escondido');
+      abaLogin.classList.add('ativa');
+      abaCadastro.classList.remove('ativa');
+    });
+
+    formCadastro.addEventListener('submit', function (event) {
+      event.preventDefault();
+      window.location.href = 'pagina1.html';
+    });
+
+    formLogin.addEventListener('submit', function (event) {
+      event.preventDefault();
+      window.location.href = 'pagina1.html';
+    });
+  </script>
+
+</body>
+</html>
